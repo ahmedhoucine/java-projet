@@ -1,0 +1,34 @@
+<app-navbar></app-navbar>
+
+<div class="container" *ngIf="selectedCategory">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <form #categoryForm="ngForm" (ngSubmit)="submitmodification(categoryForm,selectedCategory.id)">
+        <div class="form-group">
+          <label for="categoryName">Category name</label>
+          <input type="text" class="form-control" id="categoryName" placeholder="Enter category name" name="categoryName" ngModel [(ngModel)]="selectedCategory.name" #categoryName="ngModel" required>
+        </div>
+        <button type="submit" class="btn btn-primary" >Submit</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="container" *ngIf="!selectedCategory">
+    <div class="row">
+      <div class="col-md-6 offset-md-3"> <!-- Center the content on medium screens and above -->
+        <div *ngFor="let category of categories" class="card mb-3">
+          <div class="card-body">
+            <h3 class="card-title">{{ category.name }}</h3>
+            <button class="btn btn-danger" (click)="deleteCategory(category.id)">Delete</button>
+            <button class="btn btn-primary" (click)="editCategory(category.id)">Edit</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+
+
+  

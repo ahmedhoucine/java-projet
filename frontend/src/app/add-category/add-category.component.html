@@ -1,0 +1,14 @@
+<app-navbar></app-navbar>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <form #categoryForm="ngForm" (ngSubmit)="submitForm(categoryName.value)">
+        <div class="form-group">
+          <label for="categoryName">Category name</label>
+          <input type="text" class="form-control" id="categoryName" placeholder="Enter category name" name="categoryName" ngModel #categoryName="ngModel" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+  </div>
+</div>

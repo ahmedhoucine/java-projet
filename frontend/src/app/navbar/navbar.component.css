@@ -1,0 +1,13 @@
+.description{
+    color: yellow;
+    font-size: 20px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 25px;
+}
+.navbar-nav a {
+    color: #FFFFFF; 
+    text-decoration: none; 
+    padding: 10px 15px; 
+    margin: 20px;
+    font-size: 18px;
+  }
